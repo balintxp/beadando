@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kapcsolati oldal a luxus autók iránt érdeklődőknek">
+    <meta name="author" content="Kotroczó Bálint">
+    <meta name="copyright" content="Az oldal oktatási célokra jött létre">
+    <title>Kapcsolat</title>
+    <link rel="stylesheet" href="kbstilus1.css">
+    <link rel="icon" type="image/x-icon" href="Kepek/favicon.png">
+</head>
+<body>
+    <header>
+        <h1>Kapcsolatfelvétel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="ferrari.html">Ferrari</a></li>
+                <li><a href="lamborghini.html">Lamborghini</a></li>
+                <li><a href="rollsroyce.html">Rolls-Royce</a></li>
+                <li><a href="astonmartin.html">Aston Martin</a></li>
+                <li id="current"><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="contactForm" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post">
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" placeholder="Kérlek írd ide a neved!" required>
+
+            <label for="date">Születési dátum:</label>
+            <input type="date" id="date" name="datum" placeholder="Mikor születtél?"></input>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Add meg az e-mail címed!"  required>
+            
+            <label for="phone">Telefonszám:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Add meg a telefonszámod!">
+            
+            <label for="interest">Érdeklődés tárgya:</label>
+            <select id="interest" name="interest">
+                <option value="ferrari">Ferrari</option>
+                <option value="lamborghini">Lamborghini</option>
+                <option value="rollsroyce">Rolls-Royce</option>
+                <option value="astonmartin">Aston Martin</option>
+            </select>
+            
+            <label for="message">Üzenet:</label>
+            <textarea id="message" name="message" placeholder="Mit szeretnél üzenni?"></textarea>
+            
+            <button type="submit">Elküld</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footerkontener">
+            <div class="footer-section">
+                <h3>Hasznos linkek</h3>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="ferrari.html">Ferrari</a></li>
+                    <li><a href="lamborghini.html">Lamborghini</a></li>
+                    <li><a href="rollsroyce.html">Rolls-Royce</a></li>
+                    <li><a href="astonmartin.html">Aston Martin</a></li>
+                    <li><a href="contact.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kapcsolat</h3>
+                <p>Email: info@luxusautokvilaga.hu</p>
+                <p>Telefon: +36 1 234 5678</p>
+                <p>Cím: Budapest, Andrássy út 123.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Információ</h3>
+                <div class="footerleiras">
+                    "Fedezd fel a luxusautók világát! Ismerd meg a legikonikusabb márkákat, a sebesség, elegancia és tradíció tökéletes harmóniájában."
+                </div>
+            </div>
+        </div>
+        <div class="szerzo">
+            <p>&copy; Készítette: Kotroczó Bálint</p>
+        </div>
+    
+    </footer>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+        $("#contactForm").validate({
+        rules: {
+        name: "required",
+        datum: "required",
+        email:{
+            required: true,
+            email: true},
+        phone:{
+            required: true,
+            minlength:11},
+        message:{
+            required: true,},
+        },
+
+        messages: {
+            name: "Írd be a neved!",
+            datum: "Add meg a születési dátumod!",
+            email: "Add meg az e-mail címed!",
+            phone: "Add meg a telefonszámod!",
+            message: "Írj ide valamit!",
+
+        }
+
+        });
+        });
+        </script>
+        
+</body>
+</html>

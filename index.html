@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Luxus autómárkákat bemutató weboldal">
+    <meta name="author" content="Kotroczó Bálint">
+    <meta name="copyright" content="Az oldal oktatási célokra jött létre">
+    <title>Főoldal</title>
+    <link rel="stylesheet" href="kbstilus1.css">
+    <link rel="icon" type="image/x-icon" href="Kepek/favicon.png">
+</head>
+<body>
+    <header>
+        <h1>Luxus Autók Világa</h1>
+        <nav>
+            <ul>
+                <li id="current"><a href="index.html">Főoldal</a></li>
+                <li><a href="ferrari.html">Ferrari</a></li>
+                <li><a href="lamborghini.html">Lamborghini</a></li>
+                <li><a href="rollsroyce.html">Rolls-Royce</a></li>
+                <li><a href="astonmartin.html">Aston Martin</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="markasor">
+            <h2>Fedezd fel a luxusautók világát</h2>
+            <p>Válaszd ki kedvenc márkádat, és tudj meg többet róla!</p>
+            <div class="markak">
+                <a href="ferrari.html" class="logo">
+                    <img src="Kepek/ferrarilogo.jpg" alt="Ferrari logó">
+                    <span>Ferrari</span></a>
+                <a href="lamborghini.html" class="logo">
+                    <img src="Kepek/lambologo.jpg" alt="Lamborghini logó">
+                    <span>Lamborghini</span></a>
+                <a href="rollsroyce.html" class="logo">
+                    <img src="Kepek/rrlogo.jpg" alt="Rolls-Royce logó">
+                    <span>Rolls-Royce</span></a>
+                <a href="astonmartin.html" class="logo">
+                    <img src="Kepek/astonlogo1.jpg" alt="Aston Martin logó">
+                    <span>Aston Martin</span> </a>
+            </div>
+        </section>
+        <p id="quizcim">Nemtudod melyik autó illik hozzád?</p>
+        <div class="quiz-container">
+    <h2>Autómárka Quiz</h2>
+    <form id="quiz-form">
+        <table id="quiztable">
+            <tr>
+                <th>Kérdések</th>
+                <th>Válaszok</th>
+            </tr>
+            <tr>
+                <td>1. Milyen autót szeretnél vezetni?</td>
+                <td>
+                    <label><input type="radio" name="q1" value="ferrari" required> Sportautó</label><br>
+                    <label><input type="radio" name="q1" value="rollsroyce"> Luxuslimuzin</label><br>
+                    <label><input type="radio" name="q1" value="lamborghini"> Extravagáns</label><br>
+                    <label><input type="radio" name="q1" value="astonmartin"> Időtálló dizájn</label>
+                </td>
+            </tr>
+            <tr>
+                <td>2. Milyen a személyiséged?</td>
+                <td>
+                    <label><input type="radio" name="q2" value="ferrari" required> Szeretem a sebességet</label><br>
+                    <label><input type="radio" name="q2" value="rollsroyce"> Elegáns és kifinomult</label><br>
+                    <label><input type="radio" name="q2" value="lamborghini"> Bátor és feltűnő</label><br>
+                    <label><input type="radio" name="q2" value="astonmartin"> Klasszikus és elegáns</label>
+                </td>
+            </tr>
+            <tr>
+                <td>3. Mi a legfontosabb számodra egy autóban?</td>
+                <td>
+                    <label><input type="radio" name="q3" value="ferrari" required> Teljesítmény</label><br>
+                    <label><input type="radio" name="q3" value="rollsroyce"> Kényelem</label><br>
+                    <label><input type="radio" name="q3" value="lamborghini"> Egyedi megjelenés</label><br>
+                    <label><input type="radio" name="q3" value="astonmartin"> Stílus és tradíció</label>
+                </td>
+            </tr>
+            <tr>
+                <td>4. Milyen környezetben használnád az autót leginkább?</td>
+                <td>
+                    <label><input type="radio" name="q4" value="ferrari" required> Versenypálya</label><br>
+                    <label><input type="radio" name="q4" value="rollsroyce"> Városi utak</label><br>
+                    <label><input type="radio" name="q4" value="lamborghini"> Hegyi utak</label><br>
+                    <label><input type="radio" name="q4" value="astonmartin"> Vidéki kirándulások</label>
+                </td>
+            </tr>
+            <tr>
+                <td>5. Mi a legfontosabb számodra az autó tulajdonságai közül?</td>
+                <td>
+                    <label><input type="radio" name="q5" value="ferrari" required> Gyorsulás és sebesség</label><br>
+                    <label><input type="radio" name="q5" value="rollsroyce"> Luxus és kényelem</label><br>
+                    <label><input type="radio" name="q5" value="lamborghini"> Egyedi dizájn</label><br>
+                    <label><input type="radio" name="q5" value="astonmartin"> Elegancia és tradíció</label>
+                </td>
+            </tr>            
+        </table>
+        <button type="submit" id="quizgomb">Mutasd az eredményt</button>
+    </form>
+        </div>
+
+    </main>
+    <footer>
+            <div class="footerkontener">
+                <div class="footer-section">
+                    <h3>Hasznos linkek</h3>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="ferrari.html">Ferrari</a></li>
+                        <li><a href="lamborghini.html">Lamborghini</a></li>
+                        <li><a href="rollsroyce.html">Rolls-Royce</a></li>
+                        <li><a href="astonmartin.html">Aston Martin</a></li>
+                        <li><a href="contact.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kapcsolat</h3>
+                    <p>Email: info@luxusautokvilaga.hu</p>
+                    <p>Telefon: +36 1 234 5678</p>
+                    <p>Cím: Budapest, Andrássy út 123.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Információ</h3>
+                    <div class="footerleiras">
+                        "Fedezd fel a luxusautók világát! Ismerd meg a legikonikusabb márkákat, a sebesség, elegancia és tradíció tökéletes harmóniájában."
+                    </div>
+                </div>
+            </div>
+            <div class="szerzo">
+                <p>&copy; Készítette: Kotroczó Bálint</p>
+            </div>
+        
+    </footer>
+    <script src="kbjava.js"></script>
+</body>
+</html>

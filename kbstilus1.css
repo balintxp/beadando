@@ -1,0 +1,1019 @@
+/* Mobile nézet */
+/* általános */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* header, menü*/
+
+header, nav, main, footer {
+    padding: 20px;
+}
+
+header {
+    background-image: url('Kepek/headerfoto.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 400px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-top: 27px;
+}
+
+nav {
+    margin-top: 30px;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content:center;
+    background-color: #444;
+    border: 2px solid white; 
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 16px;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li#current {
+	background-color: #676561;
+	color: #c1b7b7;
+}
+
+
+ul li a:hover, ul li#current a:hover {
+	color: #302e2e;
+	background-color: antiquewhite;
+	border-color: #aaab9c #fff #fff #ccc;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+/* Márkatörténet */
+.brand-history {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    padding: 15px;
+    margin: 15px 10px;
+    font-size: 0.9rem;
+}
+
+.history-box {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Slideshow alap beállítások */
+.slideshow-section {
+    width: 100%;
+    max-width: 1200px;  
+    margin: 50px auto; 
+    text-align: center; 
+    background-color: #f9f9f9; 
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    padding: 15px;
+}
+
+.slideshow-section h2 {
+    margin-bottom: 20px;  
+    color: #333;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+.slideshow-container {
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+}
+
+.slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Caption stílus */
+.caption {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navigációs gombok */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Animáció a slideshow elemeinek váltásához */
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Modell Tulajdonságok */
+.model-specs {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    padding: 15px;
+    margin: 15px 10px;
+    font-size: 0.9rem;
+}
+
+.spec-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.spec-box ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.model-content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.model-content img {
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+/* quiz feletti logok */
+.markasor {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.markasor h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.markasor p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.markak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    height: auto;
+    margin-bottom: 10px;
+    width: 80px;
+}
+
+.logo span {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+/* quiz */
+
+#quizcim {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Általános konténer a quizhez */
+.quiz-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* Táblázat alapvető stílusa */
+#quiztable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Fejléc (kérdés és válasz oszlop) */
+#quiztable th {
+    background-color: #f4f4f4;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    font-size: 0.85rem;
+}
+
+/* Kérdések és válaszok cellái */
+#quiztable td {
+    padding: 15px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.85rem;
+}
+
+/* Rádiógombok stílusa */
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Gombok stílusa */
+#quizgomb {
+    display: block;
+    width: 100%;
+    background-color: #2c1510;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    padding: 8px;
+}
+
+#quizgomb:hover {
+    background-color: #762e2e;
+}
+
+/* Eredmény stílus */
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9e9e9; 
+    border: 3px solid #2c1510; 
+    border-radius: 12px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+/* Eredmény cím */
+.result-container h3 {
+    color: #333; 
+    margin-bottom: 10px;
+    text-transform: capitalize; 
+    font-size: 1.5rem;
+}
+
+/* Eredmény Link stílus */
+.result-container a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #ffffff; 
+    background-color: #2c1510; 
+    text-decoration: none; 
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+    font-size: 0.9rem;
+}
+
+/* Hover effekt a linkekre */
+.result-container a:hover {
+    background-color: #762e2e; 
+    cursor: pointer;
+}
+
+/* Animáció */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kapcsolati oldal */
+#contactForm {
+    max-width: 600px;
+    width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+#contactForm label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#contactForm input, #contactForm select, #contactForm textarea, #contactForm button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 6px;
+    font-size: 0.85rem;
+}
+
+
+
+
+/* Footer alapstílusok */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Tartalom elrendezés */
+.footerkontener {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer szekciók */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: #f0a500;
+    font-size: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f0a500;
+}
+
+/* Footer alsó rész */
+.szerzo{
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+label.error {
+    color: #FB3A3A;
+    }
+
+    
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+     /* Logók */
+     .markak {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 105px;
+    }
+
+    .logo img {
+        width: 120%;
+    }
+}
+@media only screen and (min-width: 768px) {
+/* általános */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* header, menü*/
+
+header, nav, main, footer {
+    padding: 20px;
+}
+
+header {
+    background-image: url('Kepek/headerfoto.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 78px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    
+    
+}
+
+nav {
+    margin-top: 30px;
+    
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content:center;
+    background-color: #444;
+    border: 2px solid white; 
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 15px;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li#current {
+	background-color: #676561;
+	color: #c1b7b7;
+}
+
+
+ul li a:hover, ul li#current a:hover {
+	color: #302e2e;
+	background-color: antiquewhite;
+	border-color: #aaab9c #fff #fff #ccc;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Márkatörténet */
+.brand-history {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    font-size: 1rem;
+}
+
+.history-box {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Slideshow alap beállítások */
+.slideshow-section {
+    width: 100%;
+    max-width: 1200px;  
+    margin: 50px 10px;  
+    text-align: center;  
+    padding: 20px;
+    background-color: #f9f9f9;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.slideshow-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;  
+    color: #333;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 850px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Caption stílus */
+.caption {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navigációs gombok */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Animáció a slideshow elemeinek váltásához */
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Modell Tulajdonságok */
+.model-specs {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    font-size: 1rem;
+}
+
+.spec-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.spec-box ul li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.model-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+.model-content img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+
+/* quiz feletti logok */
+.markasor {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.markasor h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.markasor p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.markak {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo span {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+/* quiz */
+
+#quizcim {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Általános konténer a quizhez */
+.quiz-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+/* Táblázat alapvető stílusa */
+#quiztable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Fejléc (kérdés és válasz oszlop) */
+#quiztable th {
+    background-color: #f4f4f4;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Kérdések és válaszok cellái */
+#quiztable td {
+    padding: 15px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Rádiógombok stílusa */
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Gombok stílusa */
+#quizgomb {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2c1510;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#quizgomb:hover {
+    background-color: #762e2e;
+}
+
+/* Eredmény stílus */
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9e9e9; 
+    border: 3px solid #2c1510; 
+    border-radius: 12px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+/* Eredmény cím */
+.result-container h3 {
+    color: #333; 
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-transform: capitalize; 
+}
+
+/* Link stílus */
+.result-container a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #ffffff; 
+    background-color: #2c1510; 
+    text-decoration: none; 
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effekt a linkekre */
+.result-container a:hover {
+    background-color: #762e2e; 
+    cursor: pointer;
+}
+
+/* Animáció */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kapcsolati oldal */
+#contactForm {
+    max-width: 600px;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#contactForm input, #contactForm select, #contactForm textarea, #contactForm button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+
+
+
+/* Footer alapstílusok */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Tartalom elrendezés */
+.footerkontener {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Footer szekciók */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #f0a500;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f0a500;
+}
+
+/* Footer alsó rész */
+.szerzo{
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+}
